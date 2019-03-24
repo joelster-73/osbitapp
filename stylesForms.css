@@ -1,0 +1,38 @@
+/*Formatting for the HTML form */
+form {
+	padding: 40px 50px;
+	background-color: #F2F2F2;
+	width: 50%;
+	margin: auto;
+}
+input, select, textarea {
+	font-family: Arial, Helvetica, sans-serif;
+}
+.red {
+	color: #FF0000; /*Red font*/
+}
+/*Cutomising red dropdown arrow*/
+select {
+    -webkit-appearance: none; /*Hides default arrow*/
+    text-overflow: ''; /*Does not allow text to overflow*/
+}
+select.redArrow {
+	background-image: /*Defines two triangles for the arrow*/
+		linear-gradient(45deg, white 50%, red 50%),
+		linear-gradient(135deg, red 50%, white 50%);
+	background-position: /*Works out position*/
+		calc(100% - 10px),
+		calc(100% - 5px);
+	background-size: /*Size of triangle*/
+		5px 5px,
+		5px 5px,
+		1px 1.5px;
+	background-repeat: no-repeat;
+}
+textarea { /*For customising the text area*/
+	resize: none; /*This makes it so the user can't change the size manually*/
+	overflow: hidden; /*Hides the scroll bar - does not need one*/
+}
+input, select { /*Standardises height of all inputs*/
+	height: 25px;
+}

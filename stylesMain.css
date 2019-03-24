@@ -1,0 +1,115 @@
+/*CSS for the body*/
+body {
+	font-family: Arial, Helvetica, sans-serif;
+  color: #0A0B0C;
+	padding: 20px;
+	margin: auto;
+}
+/*CSS for the navigation bar - top*/
+/*Used for the layout of the navigation bar*/
+#navbar {
+	list-style-type: none;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+/*Defines all list indexes as blocks in the bar - positioned to the left*/
+#navbar li {
+	display: inline-block;
+	float: left;
+}
+/*Defines the image logo to be embedded within the bar*/
+.logo {
+	background-image: url('Images/Osbit-logo.jpg');
+	height: 66px;
+	width: 165px;
+	margin: 17px 140px 17px 40px;
+}
+/*Box model of a block within the navbar (not a drop down)*/
+.block {
+	margin: 25px 30px;
+	padding: 15px;
+}
+/*Font style for buttons within the nav bar*/
+.block a, .dropbtn {
+	font-size: 20px;
+	color: #666666;
+	text-decoration: none;
+	text-align: center;
+}
+/*Box model and style of a drop down button within the nav bar*/
+.dropdown {
+	padding: 5px;
+	margin: 35px 35px 0px 35px;
+	background-color: inherit;
+	font-family: inherit;
+}
+/*Style of the drop down menu - hidden until revealed*/
+.dropdown-btns {
+	display: none;
+	position: absolute;
+	min-width: auto;
+	padding: 15px 15px 15px 5px;
+	margin-left: -5px;
+	z-index: 1; /*Stack ordered of an element - positions on top*/
+}
+/*Styles the links within the dropdown menu*/
+.dropdown-btns a {
+	float: none;
+	padding: 12px 16px;
+	display: block;
+	text-align: left;
+}
+/*Used for styling the interactivity within the buttons*/
+.block a:hover:not(.active), .dropdown:hover, .dropdown-btns, .dropdown-btns a {
+	background-color: #F2F2F2;
+	color: #8C8C8C;
+	text-decoration: none;
+}
+/*Makes the active button, or dropdown menu button when hovered, bold*/
+.active, .dropdown-btns a:hover{
+	font-weight: bold;
+	font-style: normal;
+}
+/*Makes inactive buttons non-italic*/
+.inactive {
+	font-style: normal;
+}
+/*Shows the dropdown menu when the button is hovered over*/
+.dropdown:hover .dropdown-btns {
+	display: block;
+}
+/*Styling for the title of the page*/
+#titlebar {
+	margin: 60px 0px;
+	width: 100%;
+}
+#titlebar h1{
+	font-size: 30px;
+}
+#titlebar h2 {
+	font-size: 24px;
+	font-weight: normal;
+ }
+.content{
+	padding: 60px 50px;
+}
+/*Styling the navigation menu on the main screens for each subsection of the page*/
+#navMenu {
+	padding: 25px 0px;
+}
+#navMenu td button {
+	background-color: #F2F2F2;
+	border-width: 1px;
+	border-color: red;
+	color: #0A0B0C;
+	text-decoration: none;
+	font-size: 30px;
+	height: 100px;
+	width: 250px;
+	text-align: center;
+	display: inline-block;
+	margin: 20px;
+	cursor: pointer; /*Changes appearance of cursor when hovering over button*/
+}
