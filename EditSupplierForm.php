@@ -9,10 +9,12 @@
 	extract($myRows);
 	if (isset($_POST['form_Submitted'])) { //This checks whether the form has been submitted
 		$message = "Successful submission"; //defines a value for the message
-		$notUnique = checkUnique($_POST,'supplier','checkSupplier','SupplierID',$_POST['supID'],$message); //gets the returned values from the function for checking the unique values
+		$notUnique = checkUnique($_POST,'supplier','checkSupplier','SupplierID',$message,$_POST['supID']); //gets the returned values from the function for checking the unique values
 		echo "<script type='text/javascript'>window.alert('$message');</script>"; //echoes the appropiate message
 		if (!$notUnique) { //if all vlaues were unique
 			editSupplierInfo($_POST);
+          		echo "<script type='text/javascript'>window.location.href='EditSupplier.php';</script>"; //redirects user to intermediate if successful edit
+
 		}
 	}
 ?>
