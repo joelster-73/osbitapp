@@ -50,7 +50,7 @@
     for ($i = 0; $i < sizeof($_POST[$checker]); $i++) { //loops through for number of items in the array
       $sql = "INSERT INTO orderline VALUES (?,?,?,?,?,?);";
       $stmt = $conn->prepare($sql);
-      $stmt->bind_param("sssiss", $PO_ID, $_POST['tablePartID'][$i], $_POST['projectID'], $_POST['tableQty'][$i], $_POST['unitCost'][$i], $_POST['linePrice'][$i]);
+      $stmt->bind_param("sssiss", $PO_ID, $_POST['projectID'], $_POST['tablePartID'][$i], $_POST['tableQty'][$i], $_POST['unitCost'][$i], $_POST['linePrice'][$i]);
       $stmt->execute();
       $stmt->close();
     }
